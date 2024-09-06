@@ -47,3 +47,20 @@ console.log(905);
 console.log(0o777);
 // 0xから始まる16進数
 console.log(0x30A2);
+
+// 浮動小数点数
+console.log(.123);
+// e 指数(exponent) この場合2×10の8乗、10進数で表すと200000000
+console.log(2e8);
+
+/*
+BigInt
+倍精度浮動小数 最大値は2^53-1（2の53乗から1引いた値9007199254740991）
+BigInt この数値リテラルで安全に表せる最大の数値はNumber.MAX_SAFE_INTEGERとして定義
+数値リテラルは倍精度浮動小数（64ビット）で数値を扱うのに対して、BigIntでは任意の精度の整数を扱える。
+そのため、BigIntでは2^53-1（9007199254740991）よりも大きな整数を正しく表現可能。
+BigIntリテラルは、数値の後ろにnをつける。
+*/
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(1n);
+console.log(9007199254740992n);
