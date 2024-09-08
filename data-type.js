@@ -64,3 +64,33 @@ BigIntリテラルは、数値の後ろにnをつける。
 console.log(Number.MAX_SAFE_INTEGER);
 console.log(1n);
 console.log(9007199254740992n);
+
+/*
+Numeric Separators
+桁が大きくなると読み間違えが発生する可能性がある。
+そのため数値リテラル内の区切り文字として_を追加できる。
+数値リテラルである整数、浮動小数点、BigIntのリテラル内でのみ利用可能。
+*/
+console.log(1_000_000_000_000);
+
+// String 同じ記号で囲んだ内容を文字列として扱う。
+console.log("文字列");
+console.log('文字列');
+console.log(`文字列`);
+
+// 文字列の中に同じ記号が出現した場合は、 \'のように\（バックスラッシュ）を使ってエスケープする必要。
+console.log('8 o\'clock');
+console.log("8 o'clock");
+
+// 改行はエラーが発生する。改行記号のエスケープシーケンス（\n）を使うことで複数行の文字列を書くことができる。
+console.log("複数行の\n文字列を\n入れたい");
+
+// バッククウォート(`)で囲むと改行した文字列も表示できる。
+console.log(`複数行の
+文字列を
+入れたい`);
+
+// 変数値の入れ込みも可能
+const str = "文字列";
+console.log(`これは${str}です`);
+console.log(`This is \`code\``);
