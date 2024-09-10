@@ -94,3 +94,18 @@ console.log(`複数行の
 const str = "文字列";
 console.log(`これは${str}です`);
 console.log(`This is \`code\``);
+
+/* undefinedはリテラルではなく、グローバル変数で、undefinedという値を持っているだけ
+undefinedはただのグローバル変数であるため、同じundefinedという名前のローカル変数を宣言できる。
+参照 https://jsprimer.net/basic/data-type/
+
+function fn(){
+    const undefined = "独自の未定義値"; // undefinedという名前の変数をエラーなく定義できる
+    console.log(undefined); // => "独自の未定義値"}
+fn();
+*/
+
+// nullリテラル 「値がない」ということを表現する値
+const foo = null;
+console.log(foo);
+
