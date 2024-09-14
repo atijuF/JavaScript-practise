@@ -132,6 +132,23 @@ const object = {
 };
 console.log(object["123"]);
 
+// 配列リテラル
+const emptyArray = [];
+const number = [1, 2, 3];
+const array = ["index:0", "index:1", "index:2"];
+console.log(array[0]);
+console.log(array[1]);
+
+// 正規表現リテラル /（スラッシュ）と/（スラッシュ）で正規表現のパターン文字列を囲む
+const numberRegExp = /\d+/; // 1文字以上の数字にマッチする正規表現
+// `numberRegExp`の正規表現が文字列"123"にマッチするかをテストする
+console.log(numberRegExp.test("123"));
+
+/*
+プリミティブ型とオブジェクト
+基本的にリテラルで表現するが、Boolean、Number、Stringはそれぞれオブジェクトとして表現する方法もある。（ラッパーオブジェクト）
+勉強中、また追記する。
+*/
 
 // 出力がconsole.log()じゃないとできない理由を調べる
 
