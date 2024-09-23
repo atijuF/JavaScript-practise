@@ -43,6 +43,52 @@ console.log(10 % 4.5);
 console.log(2 ** 4);
 console.log(Math.pow(2, 4));
 
-//　単項演算子
+//　単項演算子、1つのオペランドを受け取り処理する演算子
+console.log(+1)
+console.log(+"1")
+// 数値でない文字列はNaN(Not-a-Number)、Number.isNaNメソッドを使うことでNaNの判定も可能
+console.log(+"文字列")
+// console.log(NaN === NaN);
+console.log(typeof NaN);
+console.log(Number.isNaN(NaN));
+
+console.log(-1)
+console.log(-(-1));
+console.log(-"1");
+console.log(-"文字列");
+
+// インクリメント演算子、オペランドの数値を+1する演算子
+let num1 = 1;
+num1++;
+console.log(num1);
+/* 
+インクリメント演算子は配置場所で評価の順番が変化
+後置インクリメント演算子（num++）
+1.numの評価結果を返す
+2.numに対して+1する
+
+前置インクリメント演算子(++num)
+1.numに対して+1する
+2.numの評価結果を返す
+*/
+let x = 1;
+console.log(x++);
+console.log(x);
+
+console.log(++x);
+console.log(x);
+
+// デクリメント演算子、
+num--;
+console.log(num);
+// 後置デクリメント演算子
+console.log(x--);
+console.log(x);
+// 前置デクリメント演算子
+let y = 1;
+console.log(--y);
+console.log(y);
+
+// 比較演算子
 
 // 暗黙的な型変換と明示的な型変換
