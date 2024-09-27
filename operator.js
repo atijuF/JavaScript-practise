@@ -90,5 +90,64 @@ console.log(--y);
 console.log(y);
 
 // 比較演算子
+/*
+厳密等価演算子
+左右の2つのオペランドを比較
+空のオブジェクトリテラル({})同士を比較すると、オブジェクトリテラルは新しいオブジェクトを作成する。
+そのため、異なるオブジェクトを参照する変数を===で比較するとfalseを返す。
+*/
+console.log(1 === 1);
+console.log(1 === "1");
+
+const objA = {};
+const objB = {};
+console.log(objA === objB);
+console.log(objA === objA);
+
+// 厳密不等化演算子
+console.log(1 !== 1);
+console.log(1 !== "1");
+
+/*
+等価演算子
+2つのオペランドを比較する。同じデータ型なら厳密等価演算子と同じ結果になる。
+オペランド同士が異なる型の値であった場合は、 同じ型となるように暗黙的な型変換をしてから比較する。
+暗黙的な型変換が行われる等価演算子の使用は避けるべき。
+代わりに、厳密等価演算子を使い、異なる型を比較したい場合は明示的に型を合わせるべき。
+*/
+console.log(1 == "1");
+console.log(1 == "01");
+// 真偽値を数値に変換してから比較
+console.log(0 == false);
+// nullの比較はfalseを返す
+console.log(0 == null);
+// nullとundefinedの比較は常にtrueを返す
+console.log(null == undefined);
+
+// 要復習
+const operand = undefined; /* または null */
+// === では2つの値と比較しないといけない
+if (operand === null || operand === undefined) {
+    console.log("valueがnullまたはundefinedである場合の処理");
+}
+// == では null と比較するだけでよい
+if (operand == null) {
+    console.log("valueがnullまたはundefinedである場合の処理");
+}
+
+// 不等価演算子
+console.log(1 != 1);
+console.log("str" != "str");
+console.log("JavaScript" != "ECMAScript");
+console.log(true != true);
+// オブジェクトは参照が一致していないならtrueを返す
+console.log(objA != objB);
+console.log(objA != objA);
+console.log(1 != "1");
+console.log(0 != false);
+console.log(0 != null);
+console.log(null != undefined);
+
+
 
 // 暗黙的な型変換と明示的な型変換
